@@ -1,8 +1,9 @@
 {
   "name": "suse-cli",
-  "version": "1.0.0",
-  "description": "每当想做一些有意思的东西，都要花时间创建一个项目模板。本脚手架的作用是保存这些创建过的项目模板，减少重复劳动。",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "每当想新开一个项目试手，都要花时间创建一个项目模板。本脚手架的作用是保存这些创建过的项目模板，减少之后的重复劳动。",
+  "main": "./bin/cli.js",
+  "bin": "./bin/cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/ccjr1120/suse-cli/issues"
   },
-  "homepage": "https://github.com/ccjr1120/suse-cli#readme"
+  "homepage": "https://github.com/ccjr1120/suse-cli#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0"
+  }
 }
