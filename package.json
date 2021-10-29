@@ -1,0 +1,23 @@
+{
+  "name": "suse-cli",
+  "version": "1.0.0",
+  "description": "每当想做一些有意思的东西，都要花时间创建一个项目模板。本脚手架的作用是保存这些创建过的项目模板，减少重复劳动。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccjr1120/suse-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "multi-template"
+  ],
+  "author": "ccjr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccjr1120/suse-cli/issues"
+  },
+  "homepage": "https://github.com/ccjr1120/suse-cli#readme"
+}
