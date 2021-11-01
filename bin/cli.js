@@ -11,7 +11,8 @@ const {
   selectTemplate,
   selectHasOverwrite,
 } = require('../lib/InputFunc');
-const { downloadGit } = require('../lib/downloadGit');
+const { downloadGit } = require('../lib/DownloadFunc');
+const { updatePackageName } = require('../lib/PerfectProjectFunc');
 
 program
   .version('0.0.1')
@@ -33,7 +34,8 @@ if (options.list) {
 
     const hasOverwrite = await selectHasOverwrite(targetDir);
     if (hasOverwrite) {
-      downloadGit(targetDir, templateUrl);
+      await downloadGit(targetDir, templateUrl);
+      // await updatePackageName(targetDir, projectName);
     }
   })();
 }
