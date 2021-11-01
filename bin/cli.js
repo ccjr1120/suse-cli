@@ -1,9 +1,17 @@
 #! /usr/bin/env node
 
-const program = require('commander');
 const chalk = require('chalk');
+const program = require('commander');
+const inquirer = require('inquirer');
+const path = require('path');
 
-const TEMPLATE_LIST = require('../data/template_list.json');
+const { printTempleteList } = require('../lib/PrintFunc');
+const {
+  inputName,
+  selectTemplate,
+  selectHasOverwrite,
+} = require('../lib/InputFunc');
+const { downloadGit } = require('../lib/downloadGit');
 
 program
   .version('0.0.1')
@@ -11,6 +19,21 @@ program
   .parse(process.argv);
 
 const options = program.opts();
+
 if (options.list) {
-  console.table(TEMPLATE_LIST);
+  printTempleteList(TEMPLATE_LIST);
+} else {
+  (async () => {
+    const cwd = process.cwd();
+
+    const projectName = await inputName();
+    const targetDir = path.join(cwd, projectName);
+
+    const templateUrl = await selectTemplate();
+
+    const hasOverwrite = await selectHasOverwrite(targetDir);
+    if (hasOverwrite) {
+      downloadGit(targetDir, templateUrl);
+    }
+  })();
 }

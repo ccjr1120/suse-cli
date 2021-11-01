@@ -1,5 +1,6 @@
 [
-  { "Name": "React", "URL": "git123" },
-  { "Name": "React", "URL": "git123" },
-  { "Name": "React", "URL": "git123" }
+  {
+    "Name": "React",
+    "URL": "https://github.com/ccjr1120/react-template.git#main"
+  }
 ]
