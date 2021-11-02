@@ -1,14 +1,14 @@
 [
   {
     "Name": "Base",
-    "URL": "https://github.com/ccjr1120/s-code-template.git#base-template"
+    "URL": "https://github.com:ccjr1120/s-code-template#base-template"
   },
   {
     "Name": "React",
-    "URL": "https://github.com/ccjr1120/s-code-template.git#react-template"
+    "URL": "https://github.com:ccjr1120/s-code-template#react-template"
   },
   {
     "Name": "React + Ts",
-    "URL": "https://github.com/ccjr1120/s-code-template.git#react-ts-template"
+    "URL": "https://github.com:ccjr1120/s-code-template#react-ts-template"
   }
 ]
